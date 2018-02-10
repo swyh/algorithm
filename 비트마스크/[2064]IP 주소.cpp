@@ -57,5 +57,4 @@ int main() {
 
 	inet_ntoa(net);
 	inet_ntoa(mask);
-
 }
