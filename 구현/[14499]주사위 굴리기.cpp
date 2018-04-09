@@ -46,22 +46,21 @@ public:
 		}
 		else if (direction == WEST) {
 			front = west;
-			back = east;		// 뒷쪽은 원래의 서쪽으로
-
+			back = east;
 
 			west = t_back;
 			east = t_front;
 		}
 		else if (direction == NORTH) {
 			front = north;
-			back = south;		// 뒷쪽은 원래의 서쪽으로
+			back = south;
 
 			north = t_back;
 			south = t_front;
 		}
 		else if (direction == SOUTH) {
 			front = south;
-			back = north;		// 뒷쪽은 원래의 서쪽으로
+			back = north;
 
 			south = t_back;
 			north = t_front;
@@ -89,8 +88,6 @@ public:
 			return 0;
 		}
 	}
-
-
 };
 
 bool check(int i, int j) {
