@@ -34,8 +34,8 @@ void dfs(int i, int cnt) {
 		//계산
 		min_val = min(min_val, min_cal());
 	}
-	else {
-		for (int j = i + 1; j < N; j++) {
+	else {	// 팀원이 될 수 있는 모든 조합을 실행한다.
+		for (int j = i + 1; j < N; j++) {	// {0 ~ N-1}, {1 ~ N-1}, {2 ~ N-1} , ...
 			if (visit[j] == false) {
 				visit[j] = true;
 				dfs(j, cnt + 1);
