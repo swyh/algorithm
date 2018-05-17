@@ -1,3 +1,3 @@
 # Algorithm
-2016-08-17 ~  
-[BAEKJOON user inform]https://www.acmicpc.net/user/rladudgns
+- [BAEKJOON user information](https://www.acmicpc.net/user/rladudgns)
+- 2016-08-17 ~  
