@@ -22,7 +22,7 @@ int main() {
 	else
 		dp[1] = 0;
 
-
+	//이 날 상담을 할 때 최대값 (상담 불가능 하면 0)
 	for (int i = 2; i <= N; i++) {
 		if (arr[i].first > N - i + 1) continue;
 
@@ -40,3 +40,39 @@ int main() {
 	}
 	cout << result << endl;
 }
+
+
+//#include <iostream>
+//#include <vector>
+//#include <algorithm>
+//using namespace std;
+//
+//int main() {
+//	int N;
+//	cin >> N;
+//
+//	vector<int> day(N + 1);
+//	vector<int> cost(N + 1);
+//	vector<int> dp(N + 1);
+//
+//	for (int i = 1; i <= N; i++) {
+//		cin >> day[i] >> cost[i];
+//	}
+//
+//	for (int i = 1; i <= N; i++) {
+//		if (i + day[i] - 1 > N) continue;
+//
+//		dp[i] = cost[i];
+//
+//		for (int j = 1; j < i; j++) {
+//			if (j + day[j] - 1 < i)
+//				dp[i] = max(dp[i], cost[i] + dp[j]);
+//		}
+//	}
+//
+//	int max_ = 0;
+//	for (int i = 1; i <= N; i++) {
+//		max_ = max(max_, dp[i]);
+//	}
+//	cout << max_ << endl;
+//}
