@@ -30,18 +30,12 @@ int main() {
 
 	v.resize(N + 1);
 	visit.resize(N + 1);
-	for (int i = 0; i < N; i++) {
-		int num, vertex, cost;
-		cin >> num;
 
-		while (1) {
-			cin >> vertex;
-			if (vertex == -1)
-				break;
-			cin >> cost;
-
-			v[num].push_back(make_pair(vertex, cost));
-		}
+	for (int i = 0; i < N - 1; i++) {
+		int v1, v2, cost;
+		cin >> v1 >> v2 >> cost;
+		v[v1].push_back(make_pair(v2, cost));
+		v[v2].push_back(make_pair(v1, cost));
 	}
 
 	dfs(1, 0);
