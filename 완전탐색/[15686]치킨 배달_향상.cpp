@@ -42,9 +42,9 @@ int main() {
 	}
 
 	int result = MAX;
-	vector<bool> isOpen(chicken.size() - M), v_temp(M, 1);
+	vector<bool> isOpen(chicken.size() - M), v_temp(M, 1);	// 뒤에 1을 넣는다. 경우의 수, 조합
 	isOpen.insert(isOpen.end(), v_temp.begin(), v_temp.end());
-
+		
 
 	do {
 		result = min(result, solve(isOpen));
