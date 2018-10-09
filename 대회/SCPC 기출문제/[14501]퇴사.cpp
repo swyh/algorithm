@@ -76,3 +76,43 @@ int main() {
 //	}
 //	cout << max_ << endl;
 //}
+
+//2018-10-07
+//#include <iostream>
+//#include <algorithm>
+//using namespace std;
+//
+//int main() {
+//	int N;
+//	cin >> N;
+//
+//	int* time = new int[N] {0};
+//	int* money = new int[N] {0};
+//	int* dp = new int[N] {0};
+//
+//	for (int i = 0; i < N; i++) {
+//		int T, P;
+//		cin >> T >> P;
+//
+//		time[i] = T;
+//		money[i] = P;
+//	}
+//
+//
+//	for (int i = 0; i < N; i++) {
+//		for (int j = 0; j < i; j++) {
+//			if (j + time[j] <= i)
+//				dp[i] = max(dp[i], dp[j]);
+//		}
+//		if (i + time[i] <= N)
+//			dp[i] += money[i];
+//	}
+//
+//	int answer = 0;
+//	for (int i = 0; i < N; i++)
+//		answer = max(answer, dp[i]);
+//
+//	cout << answer << endl;
+//
+//	return 0;
+//}
